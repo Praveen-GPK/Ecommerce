@@ -1,0 +1,28 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df = pd.read_csv("C:/Users/prave/Downloads/archive (4)/indian_food.csv")
+df
+df.head()
+df.tail()
+df.info()
+df.dropna()
+df.describe()
+df.columns
+df.hist()
+# Count occurrences of each food item
+name_counts = df['name'].value_counts().head(10)  # Top 10 food item
+
+# Create a Pie Chart
+plt.figure(figsize=(8, 8))
+plt.pie(name_counts, labels=name_counts.index, autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)
+plt.title("Top 10 Indian Food Items")
+plt.show()
+# Count occurrences of each food item
+name_counts = df['name'].value_counts().head(10)  # Top 10 food item
+
+# Create a Pie Chart
+plt.figure(figsize=(8, 8))
+plt.pie(name_counts, labels=name_counts.index, autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)
+plt.title("Top 10 Indian Food Items")
+plt.show()
